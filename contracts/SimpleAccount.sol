@@ -21,6 +21,8 @@ import "./core/BaseAccount.sol";
 contract SimpleAccount is BaseAccount, UUPSUpgradeable, Initializable {
     using ECDSA for bytes32;
 
+    string public constant CONTRACTNAME = "SimpleAccount";
+
     //filler member, to push the nonce and owner to the same slot
     // the "Initializeble" class takes 2 bytes in the first slot
     bytes28 private _filler;
